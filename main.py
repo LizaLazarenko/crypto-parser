@@ -26,7 +26,7 @@ def main():
     for t in threads:
         t.join()
     # Сохранение в файл данных
-    csv_utils.save_currencies(currencies, "results/" + file_name)
+    csv_utils.save_currencies(currencies, "report/" + file_name)
 
 
 # main файл
