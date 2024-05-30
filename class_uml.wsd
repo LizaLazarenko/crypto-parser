@@ -1,0 +1,30 @@
+@startuml market
+
+abstract class market {
+    .. Fields ..
+    String name,
+    String url,
+    Bool upper_case,
+    .. Method ..
+    String get_api_url(Token, Token)
+    .. Abstract method ..
+    abstract dict get_prices(Token, Token)
+}
+class gate_io{
+        dict get_prices(Token, Token)
+}
+class huobi{
+        dict get_prices(Token, Token)
+}
+class mexc{
+        dict get_prices(Token, Token)
+}
+class ascendex{
+        dict get_prices(Token, Token)
+}
+
+market <|-- gate_io
+market <|-- huobi
+market <|-- mexc
+market <|-- ascendex
+@enduml
